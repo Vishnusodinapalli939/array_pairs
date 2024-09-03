@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr=[30,50,30,50,20,50,50,20,50,50,50];
+emp=[]
+sum=0
+for(i of arr){
+    if(!emp.includes(i)){
+        emp.push(i);
+    }
+}
+console.log(emp)
+for(i of emp){
+    c=0
+    for(j of arr){
+        if(i==j){
+            c++
+        }
+    }
+    if(c>1){
+        sum+=Math.floor(Number(c/2));
+    }
+}
+alert(sum)
+    </script>
+</body>
+</html>
